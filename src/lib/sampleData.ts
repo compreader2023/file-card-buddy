@@ -76,14 +76,14 @@ const sampleFiles: FileItem[] = [
     type: "image",
     size: 89400,
     description: "应用截图",
-    dataUrl: "data:image/svg+xml;base64," + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+    dataUrl: svgDataUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
 <rect width="400" height="225" fill="#1e293b" rx="12"/>
 <rect x="20" y="20" width="360" height="30" fill="#334155" rx="6"/>
 <circle cx="40" cy="35" r="5" fill="#ef4444"/><circle cx="58" cy="35" r="5" fill="#eab308"/><circle cx="76" cy="35" r="5" fill="#22c55e"/>
 <rect x="20" y="65" width="160" height="140" fill="#334155" rx="6"/>
 <rect x="195" y="65" width="185" height="65" fill="#334155" rx="6"/>
 <rect x="195" y="140" width="185" height="65" fill="#334155" rx="6"/>
-<text x="200" y="210" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="11" font-family="system-ui">应用截图</text></svg>`),
+<text x="200" y="210" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="11" font-family="system-ui">Screenshot</text></svg>`),
     createdAt: Date.now() - 3600000,
   },
 ];
