@@ -1,5 +1,9 @@
 import { FileItem, saveFiles, getFiles } from "./fileStore";
 
+function svgDataUrl(svg: string): string {
+  return "data:image/svg+xml," + encodeURIComponent(svg);
+}
+
 const SAMPLE_HTML = `<!DOCTYPE html>
 <html lang="zh">
 <head><meta charset="UTF-8"><title>欢迎页面</title>
