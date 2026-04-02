@@ -62,11 +62,11 @@ const sampleFiles: FileItem[] = [
     type: "image",
     size: 12800,
     description: "用户头像",
-    dataUrl: "data:image/svg+xml;base64," + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+    dataUrl: svgDataUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
 <rect width="400" height="225" fill="#f0fdf4" rx="12"/>
 <circle cx="200" cy="90" r="40" fill="#22c55e"/>
-<text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-family="system-ui">😊</text>
-<text x="200" y="160" text-anchor="middle" fill="#166534" font-size="16" font-family="system-ui" font-weight="bold">用户头像</text>
+<text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-family="system-ui">A</text>
+<text x="200" y="160" text-anchor="middle" fill="#166534" font-size="16" font-family="system-ui" font-weight="bold">Avatar</text>
 <text x="200" y="185" text-anchor="middle" fill="#15803d" font-size="12" font-family="system-ui">avatar.png</text></svg>`),
     createdAt: Date.now() - 86400000 * 4,
   },
