@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { isLoggedIn, logout, getFiles, FileItem } from "@/lib/fileStore";
+import { loadSampleData } from "@/lib/sampleData";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import FileCard from "@/components/FileCard";
@@ -17,6 +18,7 @@ const Dashboard = () => {
       navigate("/");
       return;
     }
+    loadSampleData();
     setFiles(getFiles());
   }, [navigate]);
 
