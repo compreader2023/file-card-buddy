@@ -1,5 +1,9 @@
 import { FileItem, saveFiles, getFiles } from "./fileStore";
 
+function svgDataUrl(svg: string): string {
+  return "data:image/svg+xml," + encodeURIComponent(svg);
+}
+
 const SAMPLE_HTML = `<!DOCTYPE html>
 <html lang="zh">
 <head><meta charset="UTF-8"><title>欢迎页面</title>
@@ -45,11 +49,11 @@ const sampleFiles: FileItem[] = [
     type: "image",
     size: 45200,
     description: "网站横幅图片",
-    dataUrl: "data:image/svg+xml;base64," + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+    dataUrl: svgDataUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
 <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
 <rect width="400" height="225" fill="url(#g)" rx="12"/>
-<text x="200" y="105" text-anchor="middle" fill="white" font-size="28" font-family="system-ui" font-weight="bold">🖼️ Banner</text>
-<text x="200" y="135" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="14" font-family="system-ui">示例横幅图片</text></svg>`),
+<text x="200" y="105" text-anchor="middle" fill="white" font-size="28" font-family="system-ui" font-weight="bold">Banner</text>
+<text x="200" y="135" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="14" font-family="system-ui">Sample Banner</text></svg>`),
     createdAt: Date.now() - 86400000 * 3,
   },
   {
@@ -58,11 +62,11 @@ const sampleFiles: FileItem[] = [
     type: "image",
     size: 12800,
     description: "用户头像",
-    dataUrl: "data:image/svg+xml;base64," + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+    dataUrl: svgDataUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
 <rect width="400" height="225" fill="#f0fdf4" rx="12"/>
 <circle cx="200" cy="90" r="40" fill="#22c55e"/>
-<text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-family="system-ui">😊</text>
-<text x="200" y="160" text-anchor="middle" fill="#166534" font-size="16" font-family="system-ui" font-weight="bold">用户头像</text>
+<text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-family="system-ui">A</text>
+<text x="200" y="160" text-anchor="middle" fill="#166534" font-size="16" font-family="system-ui" font-weight="bold">Avatar</text>
 <text x="200" y="185" text-anchor="middle" fill="#15803d" font-size="12" font-family="system-ui">avatar.png</text></svg>`),
     createdAt: Date.now() - 86400000 * 4,
   },
@@ -72,14 +76,14 @@ const sampleFiles: FileItem[] = [
     type: "image",
     size: 89400,
     description: "应用截图",
-    dataUrl: "data:image/svg+xml;base64," + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+    dataUrl: svgDataUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
 <rect width="400" height="225" fill="#1e293b" rx="12"/>
 <rect x="20" y="20" width="360" height="30" fill="#334155" rx="6"/>
 <circle cx="40" cy="35" r="5" fill="#ef4444"/><circle cx="58" cy="35" r="5" fill="#eab308"/><circle cx="76" cy="35" r="5" fill="#22c55e"/>
 <rect x="20" y="65" width="160" height="140" fill="#334155" rx="6"/>
 <rect x="195" y="65" width="185" height="65" fill="#334155" rx="6"/>
 <rect x="195" y="140" width="185" height="65" fill="#334155" rx="6"/>
-<text x="200" y="210" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="11" font-family="system-ui">应用截图</text></svg>`),
+<text x="200" y="210" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="11" font-family="system-ui">Screenshot</text></svg>`),
     createdAt: Date.now() - 3600000,
   },
 ];
