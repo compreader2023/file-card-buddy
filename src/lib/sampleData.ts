@@ -49,11 +49,11 @@ const sampleFiles: FileItem[] = [
     type: "image",
     size: 45200,
     description: "网站横幅图片",
-    dataUrl: "data:image/svg+xml;base64," + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+    dataUrl: svgDataUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
 <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3b82f6"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
 <rect width="400" height="225" fill="url(#g)" rx="12"/>
-<text x="200" y="105" text-anchor="middle" fill="white" font-size="28" font-family="system-ui" font-weight="bold">🖼️ Banner</text>
-<text x="200" y="135" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="14" font-family="system-ui">示例横幅图片</text></svg>`),
+<text x="200" y="105" text-anchor="middle" fill="white" font-size="28" font-family="system-ui" font-weight="bold">Banner</text>
+<text x="200" y="135" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="14" font-family="system-ui">Sample Banner</text></svg>`),
     createdAt: Date.now() - 86400000 * 3,
   },
   {
