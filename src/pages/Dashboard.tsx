@@ -18,6 +18,7 @@ const Dashboard = () => {
       navigate("/");
       return;
     }
+    loadSampleData();
     setFiles(getFiles());
   }, [navigate]);
 
