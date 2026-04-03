@@ -84,16 +84,6 @@ const Dashboard = () => {
               />
             </div>
           </div>
-            <TabsTrigger value="all">
-              全部 <span className="ml-1.5 text-xs text-muted-foreground">({counts.all})</span>
-            </TabsTrigger>
-            <TabsTrigger value="html">
-              <FileText className="w-3.5 h-3.5" /> HTML <span className="ml-1 text-xs text-muted-foreground">({counts.html})</span>
-            </TabsTrigger>
-            <TabsTrigger value="image">
-              <Image className="w-3.5 h-3.5" /> 图片 <span className="ml-1 text-xs text-muted-foreground">({counts.image})</span>
-            </TabsTrigger>
-          </TabsList>
 
           <TabsContent value={tab}>
             {filtered.length === 0 ? (
