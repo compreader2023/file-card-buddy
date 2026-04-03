@@ -13,6 +13,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [files, setFiles] = useState<FileItem[]>([]);
   const [tab, setTab] = useState<string>("all");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     if (!isLoggedIn()) {
@@ -25,7 +26,8 @@ const Dashboard = () => {
 
   const refresh = () => setFiles(getFiles());
 
-  const filtered = tab === 'all' ? files : files.filter(f => f.type === tab);
+  const filtered = (tab === 'all' ? files : files.filter(f => f.type === tab))
+    .filter(f => f.name.toLowerCase().includes(search.toLowerCase()));
 
   const handleLogout = () => {
     logout();
