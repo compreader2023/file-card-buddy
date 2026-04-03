@@ -62,7 +62,28 @@ const Dashboard = () => {
 
       <main className="max-w-6xl mx-auto px-6 py-8">
         <Tabs value={tab} onValueChange={setTab}>
-          <TabsList className="mb-6">
+          <div className="flex items-center gap-4 mb-6">
+            <TabsList>
+              <TabsTrigger value="all">
+                全部 <span className="ml-1.5 text-xs text-muted-foreground">({counts.all})</span>
+              </TabsTrigger>
+              <TabsTrigger value="html">
+                <FileText className="w-3.5 h-3.5" /> HTML <span className="ml-1 text-xs text-muted-foreground">({counts.html})</span>
+              </TabsTrigger>
+              <TabsTrigger value="image">
+                <Image className="w-3.5 h-3.5" /> 图片 <span className="ml-1 text-xs text-muted-foreground">({counts.image})</span>
+              </TabsTrigger>
+            </TabsList>
+            <div className="relative flex-1 max-w-xs">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                placeholder="搜索文件名..."
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                className="pl-9 h-9"
+              />
+            </div>
+          </div>
             <TabsTrigger value="all">
               全部 <span className="ml-1.5 text-xs text-muted-foreground">({counts.all})</span>
             </TabsTrigger>
