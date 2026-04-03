@@ -34,13 +34,13 @@ const FileCard = ({ file, onDelete }: FileCardProps) => {
   return (
     <div className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-md transition-all hover:border-primary/30">
       {file.type === 'image' && file.dataUrl ? (
-        <div className="aspect-video bg-muted overflow-hidden">
+        <a href={file.dataUrl} target="_blank" rel="noopener noreferrer" className="block aspect-video bg-muted overflow-hidden cursor-pointer">
           <img src={file.dataUrl} alt={file.name} className="w-full h-full object-cover" />
-        </div>
+        </a>
       ) : (
-        <div className="aspect-video bg-muted flex items-center justify-center">
+        <a href={`/view/${file.name}`} target="_blank" rel="noopener noreferrer" className="block aspect-video bg-muted flex items-center justify-center cursor-pointer">
           <FileText className="w-12 h-12 text-muted-foreground/40" />
-        </div>
+        </a>
       )}
       <div className="p-4">
         <div className="flex items-start justify-between gap-2 mb-2">
