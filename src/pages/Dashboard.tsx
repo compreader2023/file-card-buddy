@@ -4,9 +4,10 @@ import { isLoggedIn, logout, getFiles, FileItem } from "@/lib/fileStore";
 import { loadSampleData } from "@/lib/sampleData";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import FileCard from "@/components/FileCard";
 import UploadDialog from "@/components/UploadDialog";
-import { LogOut, FileText, Image, FolderOpen } from "lucide-react";
+import { LogOut, FileText, Image, FolderOpen, Search } from "lucide-react";
 
 const Dashboard = () => {
   const navigate = useNavigate();
